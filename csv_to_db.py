@@ -21,7 +21,7 @@ if __name__ == "__main__":
     if os.path.isdir(folder_path):
         csv_files = find_csv_files(folder_path)
         if csv_files:
-            engine = create_engine('mysql+pymysql://root:root@localhost/sejm')
+            engine = create_engine('mysql+pymysql://root:root@localhost/database')
             for csv_file in csv_files:
                 create_db_table(csv_file, engine)
                 print(f"Uploaded CSV file '{csv_file}' to database.")
